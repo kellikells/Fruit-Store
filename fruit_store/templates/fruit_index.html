@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Fruit Index</title>
+
+    <!-- reset css -->
+    <!-- <link rel="stylesheet" href="assets/css/reset.css"> -->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!--MY CSS -->
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+</head>
+
+<body>
+
+    <!-- Jumbotron -->
+    <!-- ========================================== -->
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4">My Fruit Store</h1>
+            <p class="lead">Welcome to the fruit store! Add fruits to your cart and checkout!</p>
+        </div>
+    </div>
+
+    <!-- main section  -->
+    <!-- ========================================== -->
+    <div class="container">
+        <form action="/checkout" method="post">
+
+            <div class="row">
+
+                <!-- Fruit Section  -->
+                <!-- ========================================== -->
+                <div class="col" id="fruit-section">
+                    <h3>What would you like to buy:</h3>
+                    <div class="card">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr class="table-secondary">
+                                    <th scope="col">Fruits</th>
+                                    <th scope="col">Quantity</th>
+                                </tr>
+                            </thead>
+                            
+                            <tbody>
+                                <tr class="table-danger">
+                                    <td>
+                                        <label for="strawberry">Strawberry</label>
+                                    </td>
+                                    <td>
+                                        <select name="strawberry" id="strawberry">
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr class="table-warning">
+                                    <td>
+                                        <label for="lemon">Lemon</label>
+                                    </td>
+                                    <td>
+                                        <select name="lemon" id="lemon">
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr class="table-info">
+                                    <td>
+                                        <label for="blueberry">Blueberry</label>
+                                    </td>
+                                    <td>
+                                        <select name="blueberry" id="blueberry">
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                                <tr class="table-success">
+                                    <td>
+                                        <label for="kiwi">Kiwi</label>
+                                    </td>
+                                    <td>
+                                        <select name="kiwi" id="kiwi">
+                                            <option value="0">0</option>
+                                            <option value="1">1</option>
+                                            <option value="2">2</option>
+                                            <option value="3">3</option>
+                                        </select>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- Customer Info Form  -->
+                <!-- ========================================== -->
+                <div class="col" id="customer-section">
+                    <h3>Your Information:</h3>
+                    <div class="form-group row">
+                        <label for="username" class="col-sm-2 col-form-label">Name:</label>
+                        <div class="col-sm-10">
+                            <input name="username" type="text" class="form-control" id="username">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label for="email" class="col-sm-2 col-form-label">Email:</label>
+                        <div class="col-sm-10">
+                            <input name="email" type="password" class="form-control" id="email">
+                        </div>
+                    </div>
+
+                    <!-- button: render checkout.html-->
+                    <!-- ========================================== -->
+                    <div>
+                        <button type="submit" class="btn btn-warning" value="submit">Submit</button>
+                    </div>
+
+                </div>
+            </div>
+
+        </form>
+    </div>
+
+
+    <!-- Link to jQuery  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- Link to Moment.js  -->
+    <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+    <!--MY JAVASCRIPT-->
+    <!-- <script type="text/javascript" src="assets/javascript/script.js"></script> -->
+
+    <!-- BOOTSTRAP'S: Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+
+</body>
+
+</html>

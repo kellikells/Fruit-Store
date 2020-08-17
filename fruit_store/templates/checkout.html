@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Checkout</title>
+
+    <!-- reset css -->
+    <!-- <link rel="stylesheet" href="assets/css/reset.css"> -->
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!--MY CSS -->
+    <link rel="stylesheet" type="text/css" href="../static/style.css">
+</head>
+
+<body>
+
+    <!-- Jumbotron -->
+    <!-- ========================================== -->
+    <div class="container">
+        <div class="jumbotron">
+            <h1 class="display-4">Order Successful!</h1>
+            <!-- <p class="lead">Welcome to the fruit store! Add fruits to your cart and checkout!</p> -->
+        </div>
+    </div>
+
+    <!-- total items & date  -->
+    <!-- ========================================== -->
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <p>
+                    <!-- ADD ITEMS & DATE OF PURCHASE -->
+                    total fruits ordered: {{ totalFruits }}
+                    <!-- {{ formData }} -->
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <!-- Fruit Section  -->
+            <!-- ========================================== -->
+            <div class="col" id="order-section">
+                <h3>Order details:</h3>
+                <div class="card">
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr class="table-secondary">
+                                <th scope="col">Fruits</th>
+                                <th scope="col">Quantity</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            <tr class="table-danger">
+                                <td>
+                                    <label for="strawberry">Strawberry</label>
+                                </td>
+                                <td>
+                                    {{ formData['strawberry'] }}
+                                </td>
+                            </tr>
+                            <tr class="table-warning">
+                                <td>
+                                    <label for="lemon">Lemon</label>
+                                </td>
+                                <td>
+                                    {{ formData['lemon'] }}
+                                </td>
+                            </tr>
+                            <tr class="table-info">
+                                <td>
+                                    <label for="blueberry">Blueberry</label>
+                                </td>
+                                <td>
+                                    {{ formData['blueberry'] }}
+                                </td>
+                            </tr>
+                            <tr class="table-success">
+                                <td>
+                                    <label for="kiwi">Kiwi</label>
+                                </td>
+                                <td>
+                                    {{ formData['kiwi'] }}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Customer Info Results  -->
+            <!-- ========================================== -->
+            <div class="col" id="customer-section">
+                <h3>Your Information:</h3>
+                <div class="form-group row">
+                    <table class="table">
+                        <tbody>
+                            <tr>
+                                <th scope="row">Name:</th>
+                                <td>
+                                    {{ formData['username'] }}
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Email:</th>
+                                <td>
+                                    {{ formData['email'] }}
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+
+                <!-- button: redirect to index page  -->
+                <!-- ========================================== -->
+                <div>
+                    <button type="button" class="btn btn-warning" value="redir-index">Back</button>
+                </div>
+
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <!-- Link to jQuery  -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+        <!-- Link to Moment.js  -->
+        <script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+
+        <!--MY JAVASCRIPT-->
+        <!-- <script type="text/javascript" src="assets/javascript/script.js"></script> -->
+
+        <!-- BOOTSTRAP'S: Optional JavaScript -->
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+
+</body>
+
+</html>

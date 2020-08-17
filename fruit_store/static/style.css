@@ -1,0 +1,15 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+body {
+    text-align: center;
+    background: url("fruit_background.jpg");
+    margin-top: 2rem;
+}
+
+button {
+    float: right;
+}
